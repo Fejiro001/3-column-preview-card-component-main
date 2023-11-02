@@ -1,0 +1,156 @@
+@import 'reset';
+
+@font-face {
+    font-display: swap;
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lexend-deca-v21-latin-regular.woff2') format('woff2'),
+        url('../fonts/lexend-deca-v21-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Big Shoulders Display';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/big-shoulders-display-v21-latin-700.woff2') format('woff2'),
+        url('../fonts/big-shoulders-display-v21-latin-700.ttf') format('truetype');
+}
+
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+
+$transparent-white: hsla(0, 0%, 100%, 0.75); //(paragraphs)
+$very-light-gray: hsl(0, 0%, 95%); //(background, headings, buttons)
+
+$padding: 3rem;
+$margin: 1.1rem;
+$gap: 1.8rem;
+$cardRadius: 0.5rem;
+
+$headingFont: 'Big Shoulders Display', sans-serif;
+$textFont: 'Lexend Deca', sans-serif;
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $very-light-gray;
+
+    @media (min-width: 50em) {
+        min-height: 100vh;
+    }
+}
+
+@mixin buttons($color) {
+    font-family: $textFont;
+    font-size: 0.9375rem;
+    color: $color;
+    background-color: $very-light-gray;
+    border: transparent;
+    padding: .8rem;
+    border-radius: 1.75rem;
+    width: 9.5rem;
+    cursor: pointer;
+    // margin-block: 1rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: $margin;
+    // height: fit-content;
+
+    @media (min-width: 50em) {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 57rem;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: $padding;
+        gap: 4rem;
+        // height: 27.5rem;
+
+
+        &:nth-child(1) {
+            background-color: $bright-orange;
+            border-radius: $cardRadius $cardRadius 0 0;
+
+            @media (min-width: 50em) {
+                border-radius: $cardRadius 0 0 $cardRadius;
+            }
+
+            button {
+                @include buttons($bright-orange);
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: $dark-cyan;
+
+            button {
+                @include buttons($dark-cyan);
+            }
+        }
+
+        &:nth-child(3) {
+            background-color: $very-dark-cyan;
+            border-radius: 0 0 $cardRadius $cardRadius;
+
+            @media (min-width: 50em) {
+                border-radius: 0 $cardRadius $cardRadius 0;
+            }
+
+            button {
+                @include buttons($very-dark-cyan);
+            }
+        }
+
+        button:hover, button:focus {
+            transition:
+                background-color 500ms ease-in-out,
+                box-shadow 500ms ease-in-out,
+                color 500ms ease-in-out;
+            background-color: transparent;
+            color: $very-light-gray;
+            box-shadow: 0 0 0 2px $very-light-gray;
+        }
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $gap;
+
+        h1 {
+            font-family: $headingFont;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: $very-light-gray;
+        }
+
+        p {
+            font-family: $textFont;
+            font-size: 1rem;
+            color: $transparent-white;
+        }
+    }
+}
+
+.attribution {
+    font-family: $textFont;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: $dark-cyan;
+    }
+}

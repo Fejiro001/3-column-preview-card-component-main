@@ -1,0 +1,193 @@
+/*
+    1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lexend-deca-v21-latin-regular.woff2") format("woff2"), url("../fonts/lexend-deca-v21-latin-regular.ttf") format("truetype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Big Shoulders Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/big-shoulders-display-v21-latin-700.woff2") format("woff2"), url("../fonts/big-shoulders-display-v21-latin-700.ttf") format("truetype");
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 95%);
+}
+@media (min-width: 50em) {
+  body {
+    min-height: 100vh;
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 1.1rem;
+}
+@media (min-width: 50em) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 57rem;
+  }
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 3rem;
+  gap: 4rem;
+}
+main section:nth-child(1) {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+@media (min-width: 50em) {
+  main section:nth-child(1) {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+}
+main section:nth-child(1) button {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9375rem;
+  color: hsl(31, 77%, 52%);
+  background-color: hsl(0, 0%, 95%);
+  border: transparent;
+  padding: 0.8rem;
+  border-radius: 1.75rem;
+  width: 9.5rem;
+  cursor: pointer;
+}
+main section:nth-child(2) {
+  background-color: hsl(184, 100%, 22%);
+}
+main section:nth-child(2) button {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9375rem;
+  color: hsl(184, 100%, 22%);
+  background-color: hsl(0, 0%, 95%);
+  border: transparent;
+  padding: 0.8rem;
+  border-radius: 1.75rem;
+  width: 9.5rem;
+  cursor: pointer;
+}
+main section:nth-child(3) {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+@media (min-width: 50em) {
+  main section:nth-child(3) {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+}
+main section:nth-child(3) button {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9375rem;
+  color: hsl(179, 100%, 13%);
+  background-color: hsl(0, 0%, 95%);
+  border: transparent;
+  padding: 0.8rem;
+  border-radius: 1.75rem;
+  width: 9.5rem;
+  cursor: pointer;
+}
+main section button:hover, main section button:focus {
+  transition: background-color 500ms ease-in-out, box-shadow 500ms ease-in-out, color 500ms ease-in-out;
+  background-color: transparent;
+  color: hsl(0, 0%, 95%);
+  box-shadow: 0 0 0 2px hsl(0, 0%, 95%);
+}
+main article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.8rem;
+}
+main article h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+}
+main article p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1rem;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.attribution {
+  font-family: "Lexend Deca", sans-serif;
+  text-align: center;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(184, 100%, 22%);
+}
