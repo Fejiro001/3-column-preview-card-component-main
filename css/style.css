@@ -159,7 +159,8 @@ main section:nth-child(3) button {
   width: 9.5rem;
   cursor: pointer;
 }
-main section button:hover, main section button:focus {
+main section button:hover,
+main section button:focus {
   transition: background-color 500ms ease-in-out, box-shadow 500ms ease-in-out, color 500ms ease-in-out;
   background-color: transparent;
   color: hsl(0, 0%, 95%);
