@@ -1,6 +1,6 @@
 # Frontend Mentor - 3-column preview card component solution
 
-This is a solution to the [3-column preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [3-column preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-).
 
 ## Table of contents
 
@@ -35,7 +35,7 @@ Hovering over a button
 ### Links
 
 - Solution URL: [](https://your-solution-url.com)
-- Live Site URL: [](https://fejiro001.github.io/3-column-preview-card-component-main/)
+- Live Site URL: [Live Site](https://fejiro001.github.io/3-column-preview-card-component-main/)
 
 ## My process
 
