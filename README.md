@@ -34,7 +34,7 @@ Hovering over a button
 
 ### Links
 
-- Solution URL: [](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/3-column-preview-card-sass-flexbox-grid-RudLT_1PVa)
 - Live Site URL: [Live Site](https://fejiro001.github.io/3-column-preview-card-component-main/)
 
 ## My process
